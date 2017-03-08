@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.MenuP.MenuP"
+                 xmlns:local="clr-namespace:App4"
+             Title="MenuP">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="Black">
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+
+
+                <Button BackgroundColor="White" Button_Clicked ="Button_Clicked"  TextColor="Black" HeightRequest="50" Text="Connection"/>
+                <Grid HeightRequest="20" />
+                <Button BackgroundColor="White" Clicked="Button_Clicked" TextColor="Black" HeightRequest="50"  Text="Mode"/>
+                <Grid HeightRequest="20" />
+                    <Button BackgroundColor="White" Clicked="Button_Clicked" TextColor="Black" HeightRequest="50" Text="Adjustments"/>
+                
+
+
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <local:MainPage />
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

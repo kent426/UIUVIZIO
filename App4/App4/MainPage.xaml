@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App4"
+             x:Class="App4.MainPage"
+             BackgroundColor="White"
+             >
+    
+    
+    <StackLayout VerticalOptions="FillAndExpand">
+        <ListView x:Name="DevicesList" RowHeight="60" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
+            
+                <ListView.Header>
+                <StackLayout Orientation="Vertical">
+
+
+                    <Label Text="UVIZIO" TextColor="Black"  FontSize="Medium" HorizontalOptions="Start" Margin="5"/>
+
+                    <BoxView HeightRequest="20"  />
+
+                    <Label Text="Connection" TextColor="Black" FontSize="Large" HorizontalOptions="Center"/>
+
+
+
+
+                    <BoxView HeightRequest="50"  />
+                </StackLayout>
+
+            </ListView.Header>
+
+
+
+            
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" Text="{Binding deviceName}"></Button>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+             
+
+        </ListView >
+    </StackLayout>
+
+
+</ContentPage>
