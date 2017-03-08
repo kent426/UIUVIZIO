@@ -37,7 +37,7 @@ namespace App4.MenuP
             {
                 Title = "Mode",
                 //IconSource = "todo.png",
-                TargetType = typeof(TestingPage)
+                TargetType = typeof(TabbedPageModeAndAdjustment)
             },
                 new MasterPageItem
             {

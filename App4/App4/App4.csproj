@@ -50,7 +50,13 @@
     <Compile Include="MenuP\MenuP.xaml.cs">
       <DependentUpon>MenuP.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MenuP\TestingPage.xaml.cs">
+    <Compile Include="TabbedPageModeAndAdjustment.xaml.cs">
+      <DependentUpon>TabbedPageModeAndAdjustment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedPageModeAndAdjustmentTab1.xaml.cs">
+      <DependentUpon>TabbedPageModeAndAdjustmentTab1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestingPage.xaml.cs">
       <DependentUpon>TestingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,7 +118,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MenuP\TestingPage.xaml">
+    <EmbeddedResource Include="TestingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TabbedPageModeAndAdjustment.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TabbedPageModeAndAdjustmentTab1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

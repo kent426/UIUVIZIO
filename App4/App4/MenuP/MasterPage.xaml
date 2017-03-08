@@ -2,18 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4.MenuP.MasterPage"
-             Title="Master"
-             BackgroundColor="Black">
+             Title="Master" 
+             BackgroundColor ="Black">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
-        <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
+        <ListView x:Name="listView" VerticalOptions="FillAndExpand" RowHeight="50"  HorizontalOptions="CenterAndExpand"  SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
 
-                        <ImageCell Height="50" Text="{Binding Title}"  TextColor="White" >
-                            
-                        </ImageCell>
-                        
+                        <ImageCell Text="{Binding Title}" TextColor="White" />
+
+
 
                     </DataTemplate>
             </ListView.ItemTemplate>
