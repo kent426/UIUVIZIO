@@ -14,7 +14,7 @@ namespace App4
         {
             InitializeComponent();
 
-            MainPage = new App4.MenuP.MenuP();
+            MainPage = new MenuP.MenuP();
         }
 
         protected override void OnStart()

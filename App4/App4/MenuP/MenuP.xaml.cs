@@ -10,23 +10,39 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace App4.MenuP
 {
 
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class MenuP : MasterDetailPage
     {
+        //MasterPage masterPage;
         public MenuP()
         {
             InitializeComponent();
 
+
+
             //BindingContext = new MenuPViewModel();
+            masterPage.ListView.ItemSelected += OnItemSelected;
+
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+       
+
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            var item = e.SelectedItem as MasterPageItem;
+            if (item != null)
+            {
+                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                masterPage.ListView.SelectedItem = null;
+                IsPresented = false;
+            }
         }
+
+
     }
 
     //class MenuPViewModel : INotifyPropertyChanged

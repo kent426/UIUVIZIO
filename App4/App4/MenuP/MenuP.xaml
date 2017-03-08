@@ -3,27 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4.MenuP.MenuP"
                  xmlns:local="clr-namespace:App4"
+                  xmlns:menuP="clr-namespace:App4.MenuP"
+                  MasterBehavior="Popover"
              Title="MenuP">
     <MasterDetailPage.Master>
-        <ContentPage Title="Menu" BackgroundColor="Black">
-            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+        <menuP:MasterPage x:Name="masterPage" Title="Master" />
+
+        
 
 
-                <Button BackgroundColor="White" Button_Clicked ="Button_Clicked"  TextColor="Black" HeightRequest="50" Text="Connection"/>
-                <Grid HeightRequest="20" />
-                <Button BackgroundColor="White" Clicked="Button_Clicked" TextColor="Black" HeightRequest="50"  Text="Mode"/>
-                <Grid HeightRequest="20" />
-                    <Button BackgroundColor="White" Clicked="Button_Clicked" TextColor="Black" HeightRequest="50" Text="Adjustments"/>
-                
-
-
-
-            </StackLayout>
-        </ContentPage>
+        
     </MasterDetailPage.Master>
+    
 
     <MasterDetailPage.Detail>
-        <local:MainPage />
+        <NavigationPage>
+            <x:Arguments>
+                <local:MainPage />
+            </x:Arguments>
+        </NavigationPage>
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>
