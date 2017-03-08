@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace App4
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class TabbedPageModeAndAdjustment : TabbedPage
     {
         public TabbedPageModeAndAdjustment()

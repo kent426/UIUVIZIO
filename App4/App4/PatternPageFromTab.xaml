@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.PatternPageFromTab"
+             Title="Present Patterns">
+  <StackLayout>
+        <ListView x:Name="PresetPatternList" RowHeight="60" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell>
+
+                        <Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" Text="{Binding PresetPatternName}"></Button>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        </ListView >
+    </StackLayout>
+</ContentPage>
