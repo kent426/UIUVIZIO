@@ -3,14 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4.MenuP.TestingPage"
              Title="TestingPage">
-  <ScrollView>
-    <StackLayout Padding="10">
-      <Label Text="ContentPage" FontSize="40"/>
-      <Label Text="ContentPage is the simplest type of page."/>
-      <Label Text="The content of the ContentPage is generally a layout of some sort that can be a parent to multiple children."/>
-      <Label Text="This contant page contains a StackLayout, which in turn contains a few Label views (including the large one on the top and an example of handling click commands and data binding to a Label below)."/>
-      <Button Text="Click Me" Command="{Binding IncreaseCountCommand}"/>
-      <Label Text="{Binding CountDisplay}"/>
-    </StackLayout>
-  </ScrollView>
+  
+    <StackLayout Padding="10" Orientation="Vertical" VerticalOptions="Center">
+            <Label HorizontalOptions="Center" />
+            <Slider x:Name="Speed" Minimum="0" Maximum="100" />
+        </StackLayout>
+ 
 </ContentPage>

@@ -10,7 +10,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
 
-                        <ImageCell Text="{Binding Title}" TextColor="White" />
+                        <ImageCell Text="{Binding Title}" Height="100" TextColor="White" />
+                       
 
 
 

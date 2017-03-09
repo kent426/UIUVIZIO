@@ -39,12 +39,12 @@ namespace App4.MenuP
                 //IconSource = "todo.png",
                 TargetType = typeof(TabbedPageModeAndAdjustment)
             },
-                new MasterPageItem
-            {
-                Title = "Adjustment",
-                //IconSource = "todo.png",
-                TargetType = typeof(MainPage)
-            },
+            //    new MasterPageItem
+            //{
+            //    Title = "Adjustment",
+            //    //IconSource = "todo.png",
+            //    TargetType = typeof(MainPage)
+            //},
         };
 
            
