@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,15 +8,19 @@ using Xamarin.Forms;
 
 namespace App4
 {
-    class PresetPattern
+    class PresetPattern : INotifyPropertyChanged
     {
         private string name;
         private string backgroundImageSrc;
+        private string selectedImageSrc;
 
-        public PresetPattern(string name, string backgroundImageSrc)
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public PresetPattern(string name, string backgroundImageSrc, string selectedImageSrc)
         {
             this.name = name;
             this.backgroundImageSrc = backgroundImageSrc;
+            this.selectedImageSrc = selectedImageSrc;
         }
 
         public string Name
@@ -39,6 +44,26 @@ namespace App4
             set
             {
                 backgroundImageSrc = value;
+            }
+        }
+
+        public string SelectedImageSrc
+        {
+            get
+            {
+                return selectedImageSrc;
+            }
+            set
+            {
+                if(selectedImageSrc != value)
+                {
+                    selectedImageSrc = value;
+
+                    if(PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("SelectedImageSrc"));
+                    }
+                }
             }
         }
     }

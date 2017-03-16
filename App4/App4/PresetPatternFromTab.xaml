@@ -27,7 +27,7 @@
 
                             <Label x:Name="modeName" TextColor="White" Text="{Binding Name}" Margin="15" FontSize="Medium" Grid.Row="1" Grid.Column="0" />
                             <Image Source="brightness_icon.png" Margin="5" Grid.Row="1" Grid.Column="1" />
-                            <Image Source="mode_selected_icon.png" Margin="8" Grid.Row="1" Grid.Column="2" />                            
+                            <Image Source="{Binding SelectedImageSrc}" Margin="8" Grid.Row="1" Grid.Column="2" />
                         </Grid>
 
                         <!--<Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" Text="{Binding Name}"></Button>-->
