@@ -42,8 +42,7 @@ namespace App4
                 //RaisePropertyChanged(() => ConnectToPreviousCommand);
             }
         }
-
-        int count;
+        
 
         public MainPage()
         {
@@ -62,7 +61,8 @@ namespace App4
                     String.Format("{0} click{1}!", count, count == 1 ? "" : "s");
             };
             */
-            
+            init();
+
             Button button = this.Content.FindByName<Button>("refresh");
             button.Clicked += (s,a) => 
             {
@@ -72,7 +72,7 @@ namespace App4
                     String.Format("{0} click{1}!", count, count == 1 ? "" : "s");
                 */
 
-                init();
+                scan();
             };
 
             //this.Content = button;
@@ -119,6 +119,7 @@ namespace App4
         private async void scan()
         {
             await this.ble.Adapter.StartScanningForDevicesAsync();
+            message("Scan Complete", "Found " + ble.Adapter.DiscoveredDevices.Count + " BLE devices");
         }
 
         private async void message(string title, string message)
