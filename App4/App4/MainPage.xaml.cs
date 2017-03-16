@@ -28,7 +28,7 @@ namespace App4
         private Guid _previousGuid;
         private CancellationTokenSource _cancellationTokenSource;
 
-        
+        private bool IsScanning = true;
         private List<IDevice> BLEDevices = new List<IDevice>();
 
         public Guid PreviousGuid
@@ -49,28 +49,11 @@ namespace App4
             InitializeComponent();
             DevicesList.ItemsSource = BLEDevices;
 
-            /*
-            Button button = new Button
-            {
-                Text = String.Format("Tap for click count!")
-            };
-            button.Clicked += (sender, args) =>
-            {
-                count++;
-                button.Text =
-                    String.Format("{0} click{1}!", count, count == 1 ? "" : "s");
-            };
-            */
             init();
 
             Button button = this.Content.FindByName<Button>("refresh");
             button.Clicked += (s,a) => 
             {
-                /*
-                count++;
-                button.Text =
-                    String.Format("{0} click{1}!", count, count == 1 ? "" : "s");
-                */
 
                 scan();
             };
@@ -118,8 +101,13 @@ namespace App4
 
         private async void scan()
         {
+            IsScanning = true;
+            ActivityIndicator animation = this.Content.FindByName<ActivityIndicator>("scanAnimation");
+            animation.IsVisible = true;
             await this.ble.Adapter.StartScanningForDevicesAsync();
             message("Scan Complete", "Found " + ble.Adapter.DiscoveredDevices.Count + " BLE devices");
+            IsScanning = false;
+            animation.IsVisible = false;
         }
 
         private async void message(string title, string message)
