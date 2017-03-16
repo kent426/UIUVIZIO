@@ -10,7 +10,7 @@
     <StackLayout VerticalOptions="FillAndExpand">
 
       <Button Text="Refresh" x:Name="refresh"/>
-      
+        
         <ListView x:Name="DevicesList" RowHeight="60" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
             
                 <ListView.Header>
@@ -49,6 +49,11 @@
              
 
         </ListView >
+        <ActivityIndicator 
+                            x:Name="scanAnimation"
+                            Color="Red"
+                            IsVisible="False"
+                            IsRunning="True" />
     </StackLayout>
 
 

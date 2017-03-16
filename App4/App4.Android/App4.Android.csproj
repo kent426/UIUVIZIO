@@ -181,6 +181,10 @@
       <Project>{80c10c11-6fcb-4038-b029-a700039e8f99}</Project>
       <Name>Plugin.BLE.Android</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Plugin.BLE\Plugin.BLE\Plugin.BLE.csproj">
+      <Project>{951ed11d-d026-449c-90dc-5027bc41fb3b}</Project>
+      <Name>Plugin.BLE</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_1.png" />
