@@ -18,36 +18,13 @@ namespace App4
 
             PatternList.ItemsSource = new List<PresetPattern>
             {
-                new PresetPattern
-                {
-                    PresetPatternName = "Pattern 1"
-                },
+                new PresetPattern("Rainbow", "bg_1.png"),
 
-                new PresetPattern
-                {
-                    PresetPatternName = "Pattern 2"
-                },
-                new PresetPattern
-                {
-                    PresetPatternName = "Pattern 3"
-                },
+                new PresetPattern("Colou Strobe", "bg_2.png"),
 
-                new PresetPattern
-                {
-                    PresetPatternName = "Pattern 4"
-                },
-                new PresetPattern
-                {
-                    PresetPatternName = "Pattern 5"
-                },
+                new PresetPattern("Colou Walk", "bg_3.png"),
 
-                new PresetPattern
-                {
-                    PresetPatternName = "Pattern 6"
-                },
-
-
-
+                new PresetPattern("Fire Pixel", "bg_4.png"),
             };
         }
     }
