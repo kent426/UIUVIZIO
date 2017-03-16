@@ -51,12 +51,12 @@
     <Compile Include="MenuP\MenuP.xaml.cs">
       <DependentUpon>MenuP.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PresetPattern.cs" />
+    <Compile Include="Mode.cs" />
     <Compile Include="TabbedPageModeAndAdjustment.xaml.cs">
       <DependentUpon>TabbedPageModeAndAdjustment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PresetPatternFromTab.xaml.cs">
-      <DependentUpon>PresetPatternFromTab.xaml</DependentUpon>
+    <Compile Include="ModeTab.xaml.cs">
+      <DependentUpon>ModeTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestingPage.xaml.cs">
       <DependentUpon>TestingPage.xaml</DependentUpon>
@@ -152,7 +152,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PresetPatternFromTab.xaml">
+    <EmbeddedResource Include="ModeTab.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

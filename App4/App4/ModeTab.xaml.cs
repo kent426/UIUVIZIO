@@ -13,22 +13,22 @@ namespace App4
     
     public partial class PresetPatternFromTab : ContentPage
     {
-        private ObservableCollection<PresetPattern> modes;
-        private PresetPattern currentMode;
+        private ObservableCollection<Mode> modes;
+        private Mode currentMode;
 
         public PresetPatternFromTab()
         {
             InitializeComponent();
 
-            modes = new ObservableCollection<PresetPattern>
+            modes = new ObservableCollection<Mode>
             {
-                new PresetPattern("Rainbow", "bg_1.png", "mode_selected_icon.png"),
+                new Mode("Rainbow", "bg_1.png", "mode_selected_icon.png"),
 
-                new PresetPattern("Colou Strobe", "bg_2.png", "mode_deselected_icon.png"),
+                new Mode("Colou Strobe", "bg_2.png", "mode_deselected_icon.png"),
 
-                new PresetPattern("Colou Walk", "bg_3.png", "mode_deselected_icon.png"),
+                new Mode("Colou Walk", "bg_3.png", "mode_deselected_icon.png"),
 
-                new PresetPattern("Fire Pixel", "bg_4.png", "mode_deselected_icon.png"),
+                new Mode("Fire Pixel", "bg_4.png", "mode_deselected_icon.png"),
             };
 
             currentMode = modes.ElementAt(0);
@@ -45,7 +45,7 @@ namespace App4
                 return;
             }
 
-            PresetPattern mode = (PresetPattern) e.SelectedItem;
+            Mode mode = (Mode) e.SelectedItem;
 
             mode.SelectedImageSrc = "mode_selected_icon.png";
             currentMode.SelectedImageSrc = "mode_deselected_icon.png";

@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace App4
 {
-    class PresetPattern : INotifyPropertyChanged
+    class Mode : INotifyPropertyChanged
     {
         private string name;
         private string backgroundImageSrc;
@@ -16,7 +16,7 @@ namespace App4
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public PresetPattern(string name, string backgroundImageSrc, string selectedImageSrc)
+        public Mode(string name, string backgroundImageSrc, string selectedImageSrc)
         {
             this.name = name;
             this.backgroundImageSrc = backgroundImageSrc;
