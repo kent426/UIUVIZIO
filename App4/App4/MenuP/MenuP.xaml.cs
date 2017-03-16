@@ -22,8 +22,6 @@ namespace App4.MenuP
         {
             InitializeComponent();
 
-
-
             //BindingContext = new MenuPViewModel();
             masterPage.ListView.ItemSelected += OnItemSelected;
 

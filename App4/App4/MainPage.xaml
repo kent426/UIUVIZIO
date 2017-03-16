@@ -8,6 +8,9 @@
     
     
     <StackLayout VerticalOptions="FillAndExpand">
+
+      <Button Text="Refresh" x:Name="refresh"/>
+      
         <ListView x:Name="DevicesList" RowHeight="60" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
             
                 <ListView.Header>
@@ -36,7 +39,9 @@
 
                         <ViewCell>
 
-                            <Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" Text="{Binding deviceName}"></Button>
+                            <Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" 
+                                    x:Id="{Binding deviceId}" 
+                                    Text="{Binding deviceName}"></Button>
 
                         </ViewCell>
                     </DataTemplate>
