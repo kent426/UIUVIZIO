@@ -15,8 +15,12 @@
                 <DataTemplate>
 
                     <ViewCell>
+                        <Grid HeightRequest="333" BackgroundColor="Black">
+                            <Image Source="{Binding BackgroundImageSrc}" Aspect="AspectFill"/>
+                            <Label TextColor="White" Text="{Binding Name}"></Label>
+                        </Grid>
 
-                        <Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" Text="{Binding PresetPatternName}"></Button>
+                        <!--<Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" Text="{Binding Name}"></Button>-->
 
                     </ViewCell>
                 </DataTemplate>
