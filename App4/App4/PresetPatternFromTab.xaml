@@ -2,22 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4.PresetPatternFromTab"
-             Title="Patterns">
+             Title="Modes">
   <StackLayout>
-        <ListView x:Name="PatternList" RowHeight="60" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
-
-            
-
-
-
+        <ListView x:Name="PatternList" RowHeight="150" BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-
                     <ViewCell>
-                        <Grid HeightRequest="333" BackgroundColor="Black">
-                            <Image Source="{Binding BackgroundImageSrc}" Aspect="AspectFill"/>
-                            <Label TextColor="White" Text="{Binding Name}"></Label>
+                        
+                        <Grid BackgroundColor="Black">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <Image Source="{Binding BackgroundImageSrc}" Aspect="AspectFill" Grid.RowSpan="2" Grid.ColumnSpan="4" />
+                            <Image Source="bg_overlay.png" Aspect="AspectFill" Grid.RowSpan="2" Grid.ColumnSpan="4" />
+
+                            <Label x:Name="modeName" TextColor="White" Text="{Binding Name}" Margin="15" FontSize="Medium" Grid.Row="1" Grid.Column="0" />
+                            <Image Source="brightness_icon.png" Margin="5" Grid.Row="1" Grid.Column="1" />
+                            <Image Source="mode_selected_icon.png" Margin="8" Grid.Row="1" Grid.Column="2" />                            
                         </Grid>
 
                         <!--<Button BackgroundColor="White"  BorderWidth="4" BorderColor="Black" TextColor="Black" Text="{Binding Name}"></Button>-->
@@ -25,7 +35,6 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
 
         </ListView >
     </StackLayout>
