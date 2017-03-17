@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4.MenuP.MasterPage"
              Title="Master" 
-             BackgroundColor ="Black">
+             BackgroundColor ="Black"
+             BackgroundImage="menu_bg.png">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
         <ListView x:Name="listView" VerticalOptions="FillAndExpand" RowHeight="50"  HorizontalOptions="CenterAndExpand"  SeparatorVisibility="None">

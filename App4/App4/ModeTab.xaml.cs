@@ -33,9 +33,9 @@ namespace App4
 
             currentMode = modes.ElementAt(0);
 
-            PatternList.ItemsSource = modes;
+            ModeList.ItemsSource = modes;
 
-            PatternList.ItemSelected += PatternList_ItemSelected;
+            ModeList.ItemSelected += PatternList_ItemSelected;
         }
 
         private void PatternList_ItemSelected(object sender, SelectedItemChangedEventArgs e)

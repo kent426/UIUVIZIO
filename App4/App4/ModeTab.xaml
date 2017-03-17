@@ -4,7 +4,7 @@
              x:Class="App4.PresetPatternFromTab"
              Title="Modes">
   <StackLayout>
-        <ListView x:Name="PatternList" RowHeight="150" BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
+        <ListView x:Name="ModeList" RowHeight="150" BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
