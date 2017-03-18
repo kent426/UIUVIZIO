@@ -16,44 +16,27 @@ namespace App4.MenuP
     //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterPage : ContentPage
     {
-        
         public ListView ListView { get { return listView; } }
-       
 
         public MasterPage()
         {
             InitializeComponent();
 
-
-
-            listView.ItemsSource = new List<MasterPageItem> {
-                new MasterPageItem
+            listView.ItemsSource = new List<MasterPageItem>
             {
-                Title = "Connection",
-                //IconSource = "todo.png",
-                TargetType = typeof(MainPage)
-            },
                 new MasterPageItem
-            {
-                Title = "Mode",
-                //IconSource = "todo.png",
-                TargetType = typeof(TabbedPageModeAndAdjustment)
-            },
-            //    new MasterPageItem
-            //{
-            //    Title = "Adjustment",
-            //    //IconSource = "todo.png",
-            //    TargetType = typeof(MainPage)
-            //},
-        };
-
-           
+                {
+                    Title = "Devices",
+                    //IconSource = "todo.png",
+                    TargetType = typeof(MainPage)
+                },
+                new MasterPageItem
+                {
+                    Title = "Modes",
+                    //IconSource = "todo.png",
+                    TargetType = typeof(TabbedPageModeAndAdjustment)
+                },
+            };
         }
-
-        
-  
-
-
-
     }
 }

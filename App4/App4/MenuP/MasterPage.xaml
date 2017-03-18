@@ -3,20 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4.MenuP.MasterPage"
              Title="Master" 
-             BackgroundColor ="Black"
+             BackgroundColor="Black"
              BackgroundImage="menu_bg.png">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" >
-        <ListView x:Name="listView" VerticalOptions="FillAndExpand" RowHeight="50"  HorizontalOptions="CenterAndExpand"  SeparatorVisibility="None">
+        <ListView x:Name="listView" VerticalOptions="FillAndExpand" RowHeight="100"  HorizontalOptions="CenterAndExpand"  SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Title}" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+                        </ViewCell>
 
-                        <ImageCell Text="{Binding Title}" Height="100" TextColor="White" />
-                       
+                        <!--<TextCell Text="{Binding Title}" Height="200" TextColor="White" />-->
 
 
-
-                    </DataTemplate>
+                </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>

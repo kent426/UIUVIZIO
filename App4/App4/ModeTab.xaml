@@ -9,7 +9,11 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-
+                        <!--<RelativeLayout>
+                            <Image Source="{Binding BackgroundImageSrc}" Aspect="AspectFill" Grid.RowSpan="2" Grid.ColumnSpan="4" />
+                            <Image Source="bg_overlay.png" Aspect="AspectFill" Grid.RowSpan="2" Grid.ColumnSpan="4" />
+                        </RelativeLayout>-->
+                        
                         <Grid BackgroundColor="Black">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
@@ -29,7 +33,7 @@
                             <Image Source="brightness_icon.png" Margin="5" Grid.Row="1" Grid.Column="1" />
                             <Image Source="{Binding SelectedImageSrc}" Margin="8" Grid.Row="1" Grid.Column="2" />
                         </Grid>
-                        
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -6,7 +6,7 @@
              Title="TabbedPage">
   <!--Pages can be added as references or inline-->
     <pages:PresetPatternFromTab/>
-  <ContentPage Title="adjustment">
+  <ContentPage Title="Settings">
         <StackLayout Padding="10" Orientation="Vertical" VerticalOptions="StartAndExpand">
             
             <Slider x:Name="Speed" Minimum="0" Maximum="100" />

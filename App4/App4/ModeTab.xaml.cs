@@ -31,9 +31,9 @@ namespace App4
                 new Mode("Fire Pixel", "bg_4.png", "mode_deselected_icon.png"),
             };
 
-            currentMode = modes.ElementAt(0);
-
             ModeList.ItemsSource = modes;
+            currentMode = modes.ElementAt(0);
+            //ModeList.SelectedItem = modes.ElementAt(0);
 
             ModeList.ItemSelected += PatternList_ItemSelected;
         }
@@ -47,10 +47,14 @@ namespace App4
 
             Mode mode = (Mode) e.SelectedItem;
 
-            mode.SelectedImageSrc = "mode_selected_icon.png";
-            currentMode.SelectedImageSrc = "mode_deselected_icon.png";
+            if(mode != currentMode)
+            {
+                mode.SelectedImageSrc = "mode_selected_icon.png";
+                currentMode.SelectedImageSrc = "mode_deselected_icon.png";
 
-            currentMode = mode;
+                currentMode = mode;
+            }
+            
         }
     }
 }

@@ -8,11 +8,6 @@
              Title="MenuP">
     <MasterDetailPage.Master>
         <menuP:MasterPage x:Name="masterPage" Title="Master" />
-
-        
-
-
-        
     </MasterDetailPage.Master>
     
 

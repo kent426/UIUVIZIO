@@ -13,7 +13,6 @@ using Xamarin.Forms.Xaml;
 
 namespace App4.MenuP
 {
-
     
     public partial class MenuP : MasterDetailPage
     {
@@ -24,23 +23,26 @@ namespace App4.MenuP
 
             //BindingContext = new MenuPViewModel();
             masterPage.ListView.ItemSelected += OnItemSelected;
-
         }
-
-       
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterPageItem;
             if (item != null)
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                if(item.TargetType == typeof(TabbedPageModeAndAdjustment))
+                {
+                    Detail = new NavigationPage((Page) App.ModeAndAdjustment);
+                }
+                else
+                {
+                    Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                }
+
                 masterPage.ListView.SelectedItem = null;
                 IsPresented = false;
             }
         }
-
-
     }
 
     //class MenuPViewModel : INotifyPropertyChanged
